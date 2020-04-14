@@ -81,30 +81,6 @@ L.Playback.Control = L.Control.extend({
       }
     });
 
-    $('#speed-slider').slider({
-      min: -9,
-      max: 9,
-      step: .25,
-      value: self._speedToSliderVal(this.playback.getSpeed()),
-      orientation: 'vertical',
-      slide: function( event, ui ) {
-        var speed = self._sliderValToSpeed(parseFloat(ui.value));
-        playback.setSpeed(speed);
-        $('.speed').html(speed).val(speed);
-      }
-    });
-
-    $('#speed-input').on('keyup', function(e) {
-      var speed = parseFloat($('#speed-input').val());
-      if (!speed) return;
-      playback.setSpeed(speed);
-      $('#speed-slider').slider('value', speedToSliderVal(speed));
-      $('#speed-icon-val').html(speed);
-      if (e.keyCode === 13) {
-        $('.speed-menu').dropdown('toggle');
-      }
-    });
-
     $('#calendar').datepicker({
       changeMonth: true,
       changeYear: true,
@@ -140,16 +116,7 @@ L.Playback.Control = L.Control.extend({
       var ts = self._combineDateAndTime(date, e.time);
       playback.setCursor(ts);
       $('#time-slider').slider('value', ts);
-    });
-
-    $('#load-tracks-btn').on('click', function(e) {
-      $('#load-tracks-modal').modal();
-    });
-
-    $('#load-tracks-save').on('click', function(e) {
-      var file = $('#load-tracks-file').get(0).files[0];
-      self._loadTracksFromFile(file);
-    });
+    }); 
 
   },
 
@@ -181,33 +148,6 @@ L.Playback.Control = L.Control.extend({
     return new Date(yr, mo, dy, hr, min, sec).getTime();    
   },
 
-  _loadTracksFromFile: function(file) {
-    var self = this;
-    var reader = new FileReader();
-    reader.readAsText(file);
-    reader.onload = function(e) {
-      var fileStr = e.target.result;
-
-      /**
-       * See if we can do GeoJSON...
-       */
-      try {
-        var tracks = JSON.parse(fileStr);
-      } catch (e) {
-        /**
-         * See if we can do GPX...
-         */
-        try {
-          var tracks = L.Playback.Util.ParseGPX(fileStr);
-        } catch (e) {
-          console.error('Unable to load tracks!');
-          return;
-        }
-      }
-
-      self.playback.addData(tracks);
-      $('#load-tracks-modal').modal('hide');
-    };    
-  }
+  
 
 });

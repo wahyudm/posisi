@@ -15,7 +15,7 @@ footer.lp {
 
 .lp .transport {
   margin: 0 auto;
-  width:768px;
+  width:600px;
 }
 
 .lp .navbar {
@@ -44,7 +44,7 @@ footer.lp {
 }
 
 .lp #calendar {
-  margin: 5px;
+  margin: 2px;
 }
 
 .leaflet-control-layers-list {
