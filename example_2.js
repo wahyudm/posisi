@@ -7,7 +7,7 @@ $(function() {
 		
 			var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-			}).addTo(map);
+			});
 			
 			var esri = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 			attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
@@ -23,7 +23,7 @@ $(function() {
 		   maxZoom: 20,
 		   subdomains:['mt0','mt1','mt2','mt3'],
 		   attribution: 'Google Streets'
-			});
+			}).addTo(map);
 
 			var data = [
 			{"loc":[-6.1766309,106.8304899], "title":"Stasiun Gambir"},
