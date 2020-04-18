@@ -45,6 +45,7 @@ footer.lp {
 
 .lp #calendar {
   margin: 5px;
+  display: none;
 }
 
 .leaflet-control-layers-list {
