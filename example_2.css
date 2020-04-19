@@ -51,6 +51,14 @@ footer.lp {
 }
 
 @media screen and (max-width: 300px ) {
+		footer.lp {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 10px;
+  z-index: -2;
+}
+	
 	.lp .transport {
   margin: 0 auto;
   width:300px;
