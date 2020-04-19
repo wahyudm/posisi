@@ -146,3 +146,7 @@
 .lineSelection {
     cursor: move;
 }
+
+@media screen and (max-width: 576px ) {
+	
+}

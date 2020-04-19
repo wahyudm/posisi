@@ -13,7 +13,10 @@
     <link href="example_2.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="dist/L.Control.Heightgraph.css"/>
 	<link rel="stylesheet" href="dist/leaflet-search.css" />
-	
+	<link rel="stylesheet" href="dist/MarkerCluster.css" />
+	<link rel="stylesheet" href="dist/MarkerCluster.Default.css" />
+	<link rel="stylesheet" href="dist/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Roboto&display=swap" rel="stylesheet">
     <style>
     .datetimeControl p {
         margin: 0;
@@ -23,7 +26,28 @@
 </head>
 
 <body>
-    <div id="map"></div>
+    <nav>
+            <div class="logo">
+            <h4>Posisi Kereta</h4>
+            </div>    
+        
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Map</a></li>
+                    <li><a href="">Guide</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+        
+
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+	<div id="map"></div>
 	
     <script src="https://code.jquery.com/jquery-1.11.0.js"></script>
     <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
@@ -48,11 +72,14 @@
 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	<script src="https://d3js.org/d3-collection.v1.min.js"></script>
     <script src="dist/LeafletPlayback.js"></script>
+	<script src="dist/leaflet.markercluster-src.js"></script>
     <script src="data/ka.js"></script>
 	<script src="data/jalur.js"></script>
+	<script src="data/tweets.js"></script>
     <script type="text/javascript" src="data/elevasi.js"></script>
     <script type="text/javascript" src="data/contoh.js"></script>
     <script src="example_2_control.js"></script>
     <script src="example_2.js"></script>
+	<script src="dist/script.js"></script>
 </body>
 </html>

@@ -1,9 +1,10 @@
 #map {
   position: absolute;
-  top: 0;
+  top: 50px;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: -2;
 }
 
 footer.lp {
@@ -11,6 +12,7 @@ footer.lp {
   right: 0;
   left: 0;
   bottom: 10px;
+  z-index: -2;
 }
 
 .lp .transport {
@@ -45,7 +47,18 @@ footer.lp {
 
 .lp #calendar {
   margin: 5px;
-  display: none;
+  display:none;
+}
+
+@media screen and (max-width: 300px ) {
+	.lp .transport {
+  margin: 0 auto;
+  width:300px;
+}
+	
+	.lp #time-slider {
+		width:100px;
+	}
 }
 
 .leaflet-control-layers-list {
