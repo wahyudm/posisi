@@ -50,6 +50,16 @@ footer.lp {
   display:none;
 }
 
+@media screen and (max-width: 300px ) {
+	.lp .transport {
+  margin: 0 auto;
+  width:300px;
+}
+	
+	.lp #time-slider {
+		width:100px;
+	}
+}
 
 .leaflet-control-layers-list {
   margin-bottom: 0;
