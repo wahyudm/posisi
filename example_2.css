@@ -50,24 +50,6 @@ footer.lp {
   display:none;
 }
 
-@media screen and (max-width: 300px ) {
-		footer.lp {
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 10px;
-  z-index: -1;
-}
-	
-	.lp .transport {
-  margin: 0 auto;
-  width:300px;
-}
-	
-	.lp #time-slider {
-		width:100px;
-	}
-}
 
 .leaflet-control-layers-list {
   margin-bottom: 0;
